@@ -58,10 +58,10 @@ public class TimeAPITest {
         LocalDateTime localDateTime3 = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
         System.out.println(localDateTime3);
 
-        LocalDateTime localDateTime4 = LocalDateTime.parse("2018-05-31 21:11");
+        LocalDateTime localDateTime4 = LocalDateTime.parse("2018-05-31T21:11");
         System.out.println(localDateTime4);
 
-        LocalDateTime localDateTime5 = LocalDateTime.parse("2018-05-31 21:11:00.11");
+        LocalDateTime localDateTime5 = LocalDateTime.parse("2018-05-31T21:11:00.11");
         System.out.println(localDateTime5);
 
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
@@ -71,7 +71,7 @@ public class TimeAPITest {
 
         //两个瞬时时间的时间段
         Duration duration = Duration.between(Instant.ofEpochMilli(System.currentTimeMillis()-11111), Instant.now());
-        System.out.println(duration.toString());
+        System.out.println(duration.toMillis());
 
 
     }
