@@ -1,7 +1,6 @@
 package fun.lww.test.a;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 public class C {
 
@@ -27,5 +26,7 @@ public class C {
             System.out.println(s.hashCode());
             return s.equals("name");
         }).limit(2).forEach(System.out::println);
+
+
     }
 }

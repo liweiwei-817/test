@@ -1,6 +1,7 @@
 package fun.lww.test.stream;
 
 import java.util.ArrayList;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,5 +26,20 @@ public class StreamTest {
 
         List<Integer> list1 = list.stream().distinct().collect(Collectors.toList());
         System.out.println(list1);
+
+        int i = list.stream().map(a -> a + a).reduce((sum, a) -> sum+a).get();
+        System.out.println(i);
+
+        List<String> list2 = list.stream().map(a -> a+"aaa").map(a -> a.toUpperCase()).collect(Collectors.toList());
+        list2.forEach(a -> System.out.println(a));
+
+        System.out.println("-------------");
+        //去重
+        list.stream().distinct().forEach(a -> System.out.println(a));
+
+        //最大值 最小值 总和
+        System.out.println(list.stream().mapToInt(a -> a).sum());
+        IntSummaryStatistics intSummaryStatistics = list.stream().mapToInt(a -> a).summaryStatistics();
+        System.out.println(intSummaryStatistics);
     }
 }
