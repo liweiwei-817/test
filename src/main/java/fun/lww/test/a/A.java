@@ -1,6 +1,7 @@
 package fun.lww.test.a;
 
 import java.time.Instant;
+import java.util.Map;
 
 /**
  * 如果 a+b+c=1000，且 a^2+b^2=c^2（a,b,c 为自然数），如何求出所有a、b、c可能的组合?
@@ -41,5 +42,8 @@ public class A {
         //new A().test1();
         new A().test2();
         System.out.println("结束时间：" + Instant.now().toEpochMilli());
+
+        Map map = Thread.getAllStackTraces();
+        System.out.println(map);
     }
 }
