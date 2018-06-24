@@ -20,8 +20,6 @@ public class RSA {
         return rsaMessage;
     }
 
-
-
     public static void main(String[] args){
         //基数
         int baseNum = 3 * 11;
