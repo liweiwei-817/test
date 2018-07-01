@@ -28,6 +28,11 @@ public class B {
         }
 
         map.forEach((k, v) -> System.out.println(k + " 出现 " + v + " 次"));
+
+        long s2 = new String("abc").intern().hashCode();
+        long s1 = "abc".hashCode();
+        System.out.println(s1);
+        System.out.println(s2);
     }
 
 }

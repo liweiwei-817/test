@@ -1,9 +1,8 @@
-package fun.lww.test.serialize;
+package fun.lww.test.clone;
 
 import java.io.*;
 
 /**
- * 序列化
  * Java 克隆对象两种方式
  * 1. 实现Cloneable接口 重写clone方法
  * 2. 实现Seriailzable接口 对象通过序列化 反序列化实现克隆 可以实现深度克隆

@@ -1,16 +1,16 @@
-package fun.lww.test.a;
+package fun.lww.test.single;
 
-public class SingleA {
+public class SingleEntity {
 
-    private static SingleA a;
+    private static SingleEntity a;
 
     private static Object obj = new Object();
 
-    public static SingleA getInstance() {
+    public static SingleEntity getInstance() {
         if (a == null) {
             synchronized (obj) {
                 if (a == null) {
-                    a = new SingleA();
+                    a = new SingleEntity();
                 }
             }
         }
